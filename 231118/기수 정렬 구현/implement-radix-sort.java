@@ -2,9 +2,9 @@ import java.io.*;
 import java.util.*;
 
 public class Main {
-    public class RadixBasic {
+    static public class RadixBasic {
         // 10진수 기준으로 구현
-        private static int BUCKET_NUM = 10;
+        private static final int BUCKET_NUM = 10;
 
         public static void sort(int[] arr) {
             // 10진수 버킷 생성
