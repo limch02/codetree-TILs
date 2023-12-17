@@ -12,7 +12,7 @@ public class Main {
             bw.write("John");
         } else if (a==2) {
             bw.write("Tom");
-        } else if (a==2){
+        } else if (a==3){
             bw.write("paul");
         }else {
             bw.write("Vacancy");
