@@ -16,7 +16,7 @@ public class Main {
         }else if(a>=60&&a<70){
             bw.write("D");
         }else{
-            bw.write("F")
+            bw.write("F");
         }
         bw.close();
     }
