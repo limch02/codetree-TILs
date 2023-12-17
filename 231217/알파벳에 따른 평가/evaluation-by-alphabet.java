@@ -6,16 +6,16 @@ public class Main {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        String s=br.readLine();
-        if (s=="S"){
+        String s = br.readLine();
+        if (s.equals("S")){
             bw.write("Superior");
-        } else if (s=="A") {
+        } else if (s.equals("A")) {
             bw.write("Excellent");
-        } else if (s=="B"){
+        } else if (s.equals("B")){
             bw.write("Good");
-        }else if(s=="C"){
+        }else if(s.equals("C")){
             bw.write("Usually");
-        }else if(s=="D"){
+        }else if(s.equals("D")){
             bw.write("Effort");
         }else{
             bw.write("Failure");
