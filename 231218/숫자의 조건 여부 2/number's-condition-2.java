@@ -6,7 +6,7 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         int a = Integer.parseInt(br.readLine());
-        if (a%5==0){
+        if (a==5){
             bw.write("A");
         }
         if (a%2==0){
