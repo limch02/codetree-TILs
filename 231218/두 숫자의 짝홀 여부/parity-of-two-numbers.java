@@ -13,7 +13,7 @@ public class Main {
         }else {
             bw.write("odd\n");
         }
-        if (a%2==0){
+        if (b%2==0){
             bw.write("even");
         }else {
             bw.write("odd");
