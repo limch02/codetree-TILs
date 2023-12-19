@@ -8,11 +8,11 @@ public class Main {
         double a = Double.parseDouble(br.readLine());
         double b = Double.parseDouble(br.readLine());
         if (a>=1.0&&b>=1.0){
-            sb.append("high");
+            sb.append("High");
         } else if (a>=0.5&&b>=0.5) {
-            sb.append("middle");
+            sb.append("Middle");
         } else {
-            sb.append("low");
+            sb.append("Low");
         }
         System.out.print(sb);
     }
