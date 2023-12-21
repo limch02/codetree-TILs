@@ -4,7 +4,7 @@ public class Main {
         int k =1;
         for (int i =0;i<n;i++){
             for (int j=1;j<=n;j++){
-                System.out.print(k);
+                System.out.print(k+" ");
                 if (k==9){
                     k=0;
                 }
