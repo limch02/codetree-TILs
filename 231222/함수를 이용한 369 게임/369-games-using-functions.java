@@ -6,12 +6,16 @@ public class Main {
         int count =0;
         for (int i =n;i<=m;i++){
             String s = String.valueOf(i);
-            int a = s.charAt(0)-48;
-            int b = s.charAt(1)-48;
             if (i%3==0){
                 count++;
-            } else if (a==3||a==6||a==9||b==3||b==6||b==9) {
-                count++;
+            } else {
+                for (int j=0;j<s.length();j++){
+                    int a = s.charAt(j)-48;
+                    if (a==3||a==6||a==9){
+                        count++;
+                        break;
+                    }
+                }
             }
         }
         return count;
