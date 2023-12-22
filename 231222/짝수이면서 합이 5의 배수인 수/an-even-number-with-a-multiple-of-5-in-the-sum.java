@@ -10,7 +10,7 @@ public class Main {
             if ((k-48+l-48)%5==0){
                 System.out.println("Yes");
             }else {
-                System.out.println("NO");
+                System.out.println("No");
             }
         }else {
             System.out.print("No");
