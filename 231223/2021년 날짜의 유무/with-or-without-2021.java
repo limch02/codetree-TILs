@@ -25,20 +25,18 @@ public class Main {
             }else {
                 System.out.println("No");
             }
-        } else if (a>=8&&a%2==0) {
+        } else if (a>=8&&a%2==0&&a<13) {
             if (b<32){
                 System.out.println("Yes");
             }else {
                 System.out.println("No");
             }
-        } else if (a>7&&a%2==1) {
+        } else if (a>7&&a%2==1&&a<13) {
             if (b<31){
                 System.out.println("Yes");
             }else {
                 System.out.println("No");
             }
-        } else {
-            System.out.println("No");
-        }
+        } 
     }
 }
