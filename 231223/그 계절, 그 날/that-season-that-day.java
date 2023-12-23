@@ -27,9 +27,15 @@ public class Main {
                     System.out.println("-1");
                 }
             } else if (a<8&&a%2==0){
-                if (a>3){
+                if (a<6){
                     if (b<31){
                         System.out.println("Spring");
+                    }else {
+                        System.out.println("-1");
+                    }
+                }else {
+                    if (b<31){
+                        System.out.println("Summer");
                     }else {
                         System.out.println("-1");
                     }
@@ -79,9 +85,15 @@ public class Main {
                     System.out.println("-1");
                 }
             } else if (a<8&&a%2==0){
-                if (a>3){
+                if (a<6){
                     if (b<31){
                         System.out.println("Spring");
+                    }else {
+                        System.out.println("-1");
+                    }
+                }else {
+                    if (b<31){
+                        System.out.println("Summer");
                     }else {
                         System.out.println("-1");
                     }
