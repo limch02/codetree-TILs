@@ -11,6 +11,7 @@ public class Main {
         for (int i =0;i<a;i++){
             arr[i] = Integer.parseInt(s.nextToken());
         }
+        Arrays.sort(arr);
         System.out.println(arr[b-1]);
     }
 }
