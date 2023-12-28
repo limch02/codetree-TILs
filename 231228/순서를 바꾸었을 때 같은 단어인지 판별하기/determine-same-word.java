@@ -12,7 +12,7 @@ public class Main {
         char[] c = a2.toCharArray();
         Arrays.sort(c);
         String sorted = new String(chars);
-        if (sorted==sortedStr){
+        if (sorted.equals(sortedStr)){
             System.out.println("Yes");
         }else {
             System.out.println("No");
