@@ -11,7 +11,7 @@ public class Main {
         String sortedStr = new String(chars);
         char[] c = a2.toCharArray();
         Arrays.sort(c);
-        String sorted = new String(chars);
+        String sorted = new String(c);
         if (a1.length()==a2.length()) {
 
             if (sorted.equals(sortedStr)) {
