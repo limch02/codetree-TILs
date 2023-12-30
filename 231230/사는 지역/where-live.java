@@ -20,7 +20,7 @@ public class Main {
             String name = st.nextToken();
             String l = (st.nextToken());
             String p = st.nextToken();
-            if (name.compareTo(min)<0){
+            if (name.compareTo(min)>0){
                 min = name;
                 j =i;
             }
