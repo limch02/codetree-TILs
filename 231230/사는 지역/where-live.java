@@ -14,15 +14,19 @@ public class Main {
         int a = Integer.parseInt(br.readLine());
         lv[] lvs = new lv[a];
         int j =0;
-        int min = Integer.MAX_VALUE;
+        String min = "";
         for (int i =0;i<a;i++){
             StringTokenizer st = new StringTokenizer(br.readLine());
             String name = st.nextToken();
             String l = (st.nextToken());
             String p = st.nextToken();
+            if (name.compareTo(min)<0){
+                min = name;
+                j =i;
+            }
             lvs[i] = new lv(name,l,p);
         }
-        lv ss = lvs[a-1];
+        lv ss = lvs[j];
         System.out.println("name "+ss.name);
         System.out.println("addr "+ss.lv);
         System.out.println("city "+ss.place);
