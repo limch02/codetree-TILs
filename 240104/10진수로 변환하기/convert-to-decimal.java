@@ -5,7 +5,7 @@ public class Main {
         String [] binary = br.readLine().split("");
         int num = 0;
 
-        for(int i = 0; i < 5; i++)
+        for(int i = 0; i < binary.length; i++)
             num = num * 2 + Integer.parseInt(binary[i]);
 
         System.out.print(num);
