@@ -21,7 +21,9 @@ public class Main {
                 System.out.println(b-a);
             }
         } else if(a<c){
-            if (b==c){
+            if (b>d) {
+                System.out.println(b-a);
+            } else if (b==c){
                 System.out.println(d-a);
             } else if (b<c) {
                 System.out.println((b-a)+(d-c));
@@ -29,7 +31,9 @@ public class Main {
                 System.out.println(d-a);
             }
         }else{
-            if (d==a){
+            if (b<d){
+                System.out.println(d-c);
+            } else if (d==a){
                 System.out.println(b-c);
             } else if (d<a) {
                 System.out.println((b-a)+(d-c));
