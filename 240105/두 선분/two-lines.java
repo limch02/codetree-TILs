@@ -13,14 +13,16 @@ public class Main {
         int b = Integer.parseInt(st.nextToken());
         int c = Integer.parseInt(st.nextToken());
         int d = Integer.parseInt(st.nextToken());
-        if (a<c){
-            if (b>c){
+        if (a==c){
+            System.out.println("intersecting");
+        } else if(a<c){
+            if (b>=c){
                 System.out.println("intersecting");
             }else {
                 System.out.println("nonintersecting");
             }
         }else{
-            if (d>a){
+            if (d>=a){
                 System.out.println("intersecting");
             }else {
                 System.out.println("nonintersecting");
