@@ -6,14 +6,14 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
         int a = Integer.parseInt(br.readLine());
-        if (a>=3>&&a<=5){
+        if (a>=3&&a<=5){
             sb.append("Spring");
-        } else if (a>=6>&&a<=8) {
+        } else if (a>=6&&a<=8) {
             sb.append("Summer");
-        }else if(a>=9>&&a<=11){
+        }else if(a>=9&&a<=11){
             sb.append("Fall");
         } else{
-            sb.append("Winter")
+            sb.append("Winter");
         }
         System.out.println(sb);
     }
