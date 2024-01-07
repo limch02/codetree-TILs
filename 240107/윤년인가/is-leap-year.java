@@ -9,15 +9,15 @@ public class Main {
         if (a%4==0){
             if (a%100==0){
                 if (a%400==0){
-                    sb.append("True");
+                    sb.append("true");
                 }else {
-                    sb.append("False");
+                    sb.append("false");
                 }
             }else {
-                sb.append("Ture");
+                sb.append("true");
             }
         }else {
-            sb.append("False");
+            sb.append("false");
         }
         System.out.println(sb);
     }
