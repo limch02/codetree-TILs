@@ -8,9 +8,9 @@ public class Main {
         int c = 7;
         int temp = 0;
         temp = a;
-        a = b;
-        b = c;
-        c =temp;
+        a = c;
+        c =b;
+        b = temp;
         System.out.println(a);
         System.out.println(b);
         System.out.println(c);
