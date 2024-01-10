@@ -5,6 +5,6 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         String s = st.nextToken();
-        system.out.print(s);
+        System.out.print(s);
     }
 }
