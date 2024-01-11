@@ -10,6 +10,6 @@ public class Main {
         int a = Integer.parseInt(st.nextToken());
         int b=  Integer.parseInt(st.nextToken());
         int c = Integer.parseInt(st.nextToken());
-        System.out.println((a+b+c)+" "+(a+b+c)/3);
+        System.out.println((a+b+c)+"\n"+(a+b+c)/3);
     }
 }
