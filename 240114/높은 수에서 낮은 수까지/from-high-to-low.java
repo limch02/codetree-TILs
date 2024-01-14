@@ -12,7 +12,7 @@ public class Main {
                 System.out.print(i+" ");
             }
         }else if (a<b){
-            for (int i = b;i>a;i--){
+            for (int i = b;i>=a;i--){
                 System.out.print(i+" ");
             }
         }else{
