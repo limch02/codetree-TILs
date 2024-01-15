@@ -8,14 +8,14 @@ public class Main {
         int acnt = 0;
         int bcnt = 0;
         int ccnt = 0;
-        for (int i = 0; i<10;i++){
-            if (a%3==0){
+        for (int i = 1; i<=a;i++){
+            if (i%3==0){
                 acnt++;
             }
-            if (a%4==0){
+            if (i%4==0){
                 bcnt++;
             }
-            if (a % 12 == 0) {
+            if (i % 12 == 0) {
                 ccnt++;
             }
         }
