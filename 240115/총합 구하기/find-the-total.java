@@ -8,11 +8,9 @@ public class Main {
         int a = Integer.parseInt(st.nextToken());
         int b = Integer.parseInt(st.nextToken());
         int sum = 0;
-        
+
         for (int i =a; i <=b;i++){
-            if (i % 6 == 0) {
-                sum+=i;
-            }else if(i%8==0){
+            if (i % 6 == 0&&i%8!=0) {
                 sum+=i;
             }
         }
