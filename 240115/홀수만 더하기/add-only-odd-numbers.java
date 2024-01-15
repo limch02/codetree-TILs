@@ -10,7 +10,9 @@ public class Main {
         for (int i =1; i <=a;i++){
             int b = Integer.parseInt(br.readLine());
             if (b%2==1){
-                sum+=b;
+                if (b%3==0) {
+                    sum += b;
+                }
             }
         }
         System.out.println(sum);
