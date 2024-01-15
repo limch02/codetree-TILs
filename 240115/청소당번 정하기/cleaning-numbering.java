@@ -9,10 +9,10 @@ public class Main {
         int bcnt = 0;
         int ccnt = 0;
         for (int i = 1; i<=a;i++){
-            if (i%3==0){
+            if (i%2==0){
                 acnt++;
             }
-            if (i%4==0){
+            if (i%3==0){
                 bcnt++;
             }
             if (i % 12 == 0) {
