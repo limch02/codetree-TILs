@@ -6,7 +6,7 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         int a = Integer.parseInt(st.nextToken());
-        int s = 0;
+        int s = 1;
         int k = 0;
         for (int i = 1;i<=a;i++){
             if (s>=a){
