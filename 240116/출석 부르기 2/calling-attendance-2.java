@@ -15,7 +15,7 @@ public class Main {
             } else if(a==4){
                 System.out.println("Sam");
             } else{
-                System.out.println("Vaancy");
+                System.out.println("Vacancy");
                 break;
             }
         }
