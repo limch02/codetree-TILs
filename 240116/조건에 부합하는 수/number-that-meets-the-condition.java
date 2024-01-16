@@ -12,7 +12,7 @@ public class Main {
                 continue;
             } else if ((i/8)%2==0) {
                 continue;
-            } else if (i%7>=4) {
+            } else if (i%7<4) {
                 continue;
             }else {
                 System.out.print(i+" ");
