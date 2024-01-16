@@ -10,8 +10,13 @@ public class Main {
             StringTokenizer st = new StringTokenizer(br.readLine());
             int a = Integer.parseInt(st.nextToken());
             if (a>=30){
-                System.out.printf("%.2f",sum/k);
-                break;
+                if (k==0){
+                    System.out.printf("%.2f",0.00);
+                    break;
+                }else {
+                    System.out.printf("%.2f", sum / k);
+                    break;
+                }
             }
             sum+=a;
             k++;
