@@ -10,7 +10,7 @@ public class Main {
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
             String c = st.nextToken();
-            if (c=="C"){
+            if (c.equals("C")){
                 System.out.println(a*b);
                 break;
             }else {
