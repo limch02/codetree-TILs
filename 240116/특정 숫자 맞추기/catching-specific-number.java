@@ -9,7 +9,7 @@ public class Main {
             if(a==25){
                 System.out.println("Good");
                 break;
-            }else if(a>25){
+            }else if(a<25){
                 System.out.println("Higher");
             } else{
                 System.out.println("Lower");
