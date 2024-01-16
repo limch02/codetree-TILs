@@ -17,6 +17,14 @@ public class Main {
                     System.out.printf("%.2f", sum / k);
                     break;
                 }
+            } else if (a<20) {
+                if (k==0){
+                    System.out.printf("%.2f",0.00);
+                    break;
+                }else {
+                    System.out.printf("%.2f", sum / k);
+                    break;
+                }
             }
             sum+=a;
             k++;
