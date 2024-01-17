@@ -13,11 +13,12 @@ public class Main {
             if (i%c==0){
                 k = false;
             }
-            if (k){
-                System.out.println("NO");
-            }else {
-                System.out.println("YES");
-            }
+
+        }
+        if (k){
+            System.out.println("NO");
+        }else {
+            System.out.println("YES");
         }
     }
 }
