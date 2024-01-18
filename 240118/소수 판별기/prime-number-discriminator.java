@@ -7,15 +7,15 @@ public class Main {
         StringTokenizer st = new StringTokenizer(br.readLine());
         int a = Integer.parseInt(st.nextToken());
         boolean k = false;
-        for (int i =2;i<=a;i++){
+        for (int i =2;i<a;i++){
             if (a%i==0){
                 k = true;
             }
         }
         if (k){
-            System.out.println("P");
-        }else {
             System.out.println("C");
+        }else {
+            System.out.println("P");
         }
     }
 }
