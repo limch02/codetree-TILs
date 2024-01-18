@@ -13,9 +13,9 @@ public class Main {
             }
         }
         if (k){
-            System.out.println("C");
-        }else {
             System.out.println("P");
+        }else {
+            System.out.println("C");
         }
     }
 }
