@@ -8,7 +8,7 @@ import java.io.*;
             int n = Integer.parseInt(st.nextToken());
             for(int i = 0;i<n;i++){
                 for (int j=0;j<i+1;j++){
-                    System.out.print(n-j+" ");
+                    System.out.print(n-i+j+" ");
                 }
                 System.out.println();
             }
