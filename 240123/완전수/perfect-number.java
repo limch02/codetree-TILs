@@ -7,9 +7,9 @@ public class Main {
         StringTokenizer s = new StringTokenizer(br.readLine());
         int n = Integer.parseInt(s.nextToken());
         int m = Integer.parseInt(s.nextToken());
-        int sum =0;
         int cnt = 0;
         for (int j = n;j<=m;j++){
+            int sum =0;
             for (int k = 1;k<j;k++){
                 if (j%k==0){
                     sum+=k;
