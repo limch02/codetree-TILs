@@ -14,7 +14,7 @@ public class Main {
             for(int j = n;j<=m;j++){
                 sum *=j;
             }
-            System.out.print(sum);
+            System.out.println(sum);
         }
     }
 }
