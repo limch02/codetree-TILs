@@ -8,10 +8,10 @@ import java.io.*;
             int a = Integer.parseInt(st.nextToken());
             int cnt = 65;
             for(int i = 0;i<a;i++){
-                if(cnt == 91){
-                    cnt = 65;
-                }
                 for (int j = 0; j<i+1;j++){
+                    if (cnt == 91){
+                        cnt = 65;
+                    }
                     System.out.print((char)cnt);
                     cnt++;
                 }
