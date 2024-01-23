@@ -10,7 +10,11 @@ public class Main {
             StringTokenizer ss = new StringTokenizer(br.readLine());
             int n = Integer.parseInt(ss.nextToken());
             int m = Integer.parseInt(ss.nextToken());
-            System.out.println(n*m);
+            int sum =1;
+            for(int j = n;j<=m;j++){
+                sum *=j;
+            }
+            System.out.print(sum);
         }
     }
 }
