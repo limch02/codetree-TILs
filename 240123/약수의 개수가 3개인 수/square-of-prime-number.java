@@ -10,7 +10,7 @@ public class Main {
         int cnt = 0;
         for (int j = n;j<=m;j++){
             int sum =0;
-            for (int k = 1;k<j;k++){
+            for (int k = 1;k<=j;k++){
                 if (j%k==0){
                     sum++;
                 }
