@@ -16,7 +16,7 @@ public class Main {
                 cnt++;
             }
         }
-        String s = String.format("%.1f",sum/5);
+        String s = String.format("%.1f",sum/cnt);
         System.out.println((int)sum+" "+s);
     }
 }
