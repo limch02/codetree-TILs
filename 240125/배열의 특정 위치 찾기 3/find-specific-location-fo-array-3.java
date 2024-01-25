@@ -16,6 +16,7 @@ public class Main {
                 sum = arr.get(i-1)+arr.get(i-2)+arr.get(i-3);
                 break;
             }
+            i++;
         }
         System.out.println(sum);
     }
