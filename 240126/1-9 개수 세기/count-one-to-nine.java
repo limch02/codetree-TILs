@@ -12,7 +12,7 @@ public class Main {
         int arr [] = new int[9];
         for (int i = 0 ; i<a;i++){
             int b= Integer.parseInt(st.nextToken());
-            arr[b-1] = 1;
+            arr[b-1]++;
         }
         for (int i = 0 ;i<9;i++){
             System.out.println(arr[i]);
