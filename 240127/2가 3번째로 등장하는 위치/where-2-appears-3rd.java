@@ -14,6 +14,7 @@ public class Main {
             }
             if (cnt==3){
                 System.out.println(i+1);
+                break;
             }
         }
     }
