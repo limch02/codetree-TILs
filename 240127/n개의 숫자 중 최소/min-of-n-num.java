@@ -21,6 +21,6 @@ public class Main {
                 cnt++;
             }
         }
-        System.out.println(cnt);
+        System.out.println(max+" "+cnt);
     }
 }
