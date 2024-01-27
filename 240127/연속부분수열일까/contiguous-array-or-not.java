@@ -29,6 +29,8 @@ public class Main {
                     }
                 }
                 break;
+            }else {
+                t = false;
             }
         }
         if (t){
