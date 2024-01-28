@@ -17,9 +17,11 @@ public class Main {
         }
         int max = Integer.MIN_VALUE;
         for (int key : map.keySet()){
-            if (map.get(key)>max){
-                max = map.get(key);
-            } else if (max == map.get(key)) {
+            if (map.get(key)==1){
+                if (key>max){
+                    max = key;
+                }
+            }else {
                 max = -1;
             }
         }
