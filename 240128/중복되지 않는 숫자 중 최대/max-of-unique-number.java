@@ -15,16 +15,20 @@ public class Main {
                 map.put(b,1);
             }
         }
+        ArrayList<Integer> arr = new ArrayList<>();
         int max = Integer.MIN_VALUE;
         for (int key : map.keySet()){
             if (map.get(key)==1){
                 if (key>max){
-                    max = key;
+                    arr.add(key);
                 }
-            }else {
-                max = -1;
             }
         }
-        System.out.println(max);
+        Collections.sort(arr);
+        if (!arr.isEmpty()){
+            System.out.println(arr.get(arr.size()-1));
+        } else {
+            System.out.println(-1);
+        }
     }
 }
