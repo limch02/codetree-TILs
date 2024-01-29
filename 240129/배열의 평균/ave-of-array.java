@@ -5,11 +5,11 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
-        int [][] arr = new int[2][4];
+        double [][] arr = new double[2][4];
         for (int i = 0;i<2;i++){
             StringTokenizer st = new StringTokenizer(br.readLine());
             for (int j = 0;j<4;j++){
-                int a = Integer.parseInt(st.nextToken());
+                double a = Double.parseDouble(st.nextToken());
                 arr[i][j] = a;
             }
         }
@@ -31,7 +31,8 @@ public class Main {
             sum4+= arr[i][3];
         }
         sb.append(sum1/2).append(" ").append(sum2/2).append(" ").append(sum3/2).append(" ").append(sum4/2).append("\n");
-        sb.append((sum1+sum2+sum3+sum4)/8);
+        String s = String.format("%.1f",((sum1+sum2+sum3+sum4)/8));
+        sb.append(s);
         System.out.println(sb);
     }
 }
