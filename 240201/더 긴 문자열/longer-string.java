@@ -7,7 +7,9 @@ public class Main {
         StringTokenizer st= new StringTokenizer(br.readLine());
         String s = st.nextToken();
         String k = st.nextToken();
-        if (s.length()>k.length()){
+        if (s.length()==k.length()){
+            System.out.println("same");
+        }else if (s.length()>k.length()){
             System.out.println(s+" "+s.length());
         } else {
             System.out.println(k+" "+k.length());
