@@ -6,6 +6,7 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
         String s []= new String[10];
+        int cnt = 0;
         for (int i = 0 ;i<10;i++){
             s[i] = br.readLine();
         }
@@ -14,9 +15,10 @@ public class Main {
             String t = s[i];
             if (k.equals(String.valueOf(t.charAt(t.length()-1)))) {
                 sb.append(s[i]).append("\n");
+                cnt ++;
             }
         }
-        if (sb.isEmpty()){
+        if (cnt ==0){
             System.out.println("None");
         }else {
             System.out.println(sb);
