@@ -1,157 +1,69 @@
-import java.util.*;
-import java.io.*;
-
+import java.util.Scanner;
 public class Main {
-    public static boolean num(int n){
-        if (n%4==0&&n%100==0&&n%400==0){
-            return true;
-        } else if (n%4==0&&n%100==0) {
-            return  false;
-        } else if (n%4==0) {
-            return true;
-        }else {
-            return false;
+
+    public static boolean yoounun(int k){
+        if (k>=1 && k<=3000){
+            if (k%4 !=0){
+                return false;
+            }
+            else if(k%100 !=0){
+                return true;
+
+            }
+            else if(k%400!=0){
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static int nowday1(int y,int m){
+        if (m==2){
+            if (yoounun(y)){
+                return 29;
+            }
+            else{
+                return 28;
+            }
+
+        }
+        else if(m == 4 || m==6 || m==9 || m==11){
+            return 30;
+        }
+        else{
+            return 31;
         }
     }
-    public static void main(String[] args) throws Exception{
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        int y = Integer.parseInt(st.nextToken());
-        int a = Integer.parseInt(st.nextToken());
-        int b = Integer.parseInt(st.nextToken());
-        if (num(y)){
-            if (a == 0){
-                System.out.println("-1");
-            } else if (a ==2){
-                if (b<30){
-                    System.out.println("Winter");
-                }else {
-                    System.out.println("-1");
-                }
-            } else if (a<8&&a%2==0){
-                if (a<5){
-                    if (b<31){
-                        System.out.println("Spring");
-                    }else {
-                        System.out.println("-1");
-                    }
-                }else {
-                    if (b<31){
-                        System.out.println("Summer");
-                    }else {
-                        System.out.println("-1");
-                    }
-                }
-            } else if (a<=7&&a%2==1) {
-                if (a==7){
-                    if (b<32){
-                        System.out.println("Summer");
-                    }else {
-                        System.out.println("-1");
-                    }
-                }else if (a==1){
-                    if (b<32){
-                        System.out.println("Winter");
-                    }else {
-                        System.out.println(-1);
-                    }
-                } else{
-                    if (b<32){
-                        System.out.println("Spring");
-                    }else {
-                        System.out.println("-1");
-                    }
-                }
-            } else if (a>=8&&a%2==0&&a<13) {
-                if (a<11) {
-                    if (b < 32) {
-                        System.out.println("Fall");
-                    } else {
-                        System.out.println("-1");
-                    }
-                }else {
-                    if (b < 32) {
-                        System.out.println("Winter");
-                    } else {
-                        System.out.println("-1");
-                    }
-                }
-            } else if (a>7&&a%2==1&&a<13) {
-                if (b<31){
-                    System.out.println("Fall");
-                }else {
-                    System.out.println("-1");
-                }
-            } else {
-                System.out.println("-1");
-            }
-        }else {
-            if (a == 0){
-                System.out.println("-1");
-            }
-            if (a ==2){
-                if (b<29){
-                    System.out.println("Winter");
-                }else {
-                    System.out.println("-1");
-                }
-            } else if (a<8&&a%2==0){
-                if (a<5){
-                    if (b<31){
-                        System.out.println("Spring");
-                    }else {
-                        System.out.println("-1");
-                    }
-                }else {
-                    if (b<31){
-                        System.out.println("Summer");
-                    }else {
-                        System.out.println("-1");
-                    }
-                }
-            } else if (a<=7&&a%2==1) {
-                if (a==7){
-                    if (b<32){
-                        System.out.println("Summer");
-                    }else {
-                        System.out.println("-1");
-                    }
-                }else if (a==1){
-                    if (b<32){
-                        System.out.println("Winter");
-                    }else {
-                        System.out.println(-1);
-                    }
-                } else{
-                    if (b<32){
-                        System.out.println("Spring");
-                    }else {
-                        System.out.println("-1");
-                    }
-                }
-            } else if (a>=8&&a%2==0&&a<13) {
-                if (a<11) {
-                    if (b < 32) {
-                        System.out.println("Fall");
-                    } else {
-                        System.out.println("-1");
-                    }
-                }else {
-                    if (b < 32) {
-                        System.out.println("Winter");
-                    } else {
-                        System.out.println("-1");
-                    }
-                }
-            } else if (a>7&&a%2==1&&a<13) {
-                if (b<31){
-                    System.out.println("Fall");
-                }else {
-                    System.out.println("-1");
-                }
-            } else {
-                System.out.println("-1");
-            }
+
+    public static String nowday(int y, int m, int d){
+        if ((m>=3 &&m<=5) && ( d<= nowday1(y,m))){
+            return "Spring";
         }
+        if ((m>=6 && m<=8) && ( d<= nowday1(y,m))){
+            return "Summer";
+        }
+        if ((m>=9 &&m<=11) && ( d<= nowday1(y,m))){
+            return "Fall";
+
+        }
+        if (((m==12)||((m<=2)&&m>0)) && ( d<= nowday1(y,m))){
+            return "Winter";
+        }
+        return "-1";
+    }
+
+
+
+    public static void main(String[] args) {
+        // 여기에 코드를 작성해주세요.
+        Scanner sc = new Scanner(System.in);
+        int y = sc.nextInt();
+        int m = sc.nextInt();
+        int d = sc.nextInt();
+
+        System.out.print(nowday(y,m,d));
     }
 }
