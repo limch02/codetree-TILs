@@ -22,17 +22,22 @@ public class Main {
         if (num(y)){
             if (a == 0){
                 System.out.println("-1");
-            }
-            if (a ==2){
+            } else if (a ==2){
                 if (b<30){
                     System.out.println("Winter");
                 }else {
                     System.out.println("-1");
                 }
             } else if (a<8&&a%2==0){
-                if (a>3){
+                if (a<5){
                     if (b<31){
                         System.out.println("Spring");
+                    }else {
+                        System.out.println("-1");
+                    }
+                }else {
+                    if (b<31){
+                        System.out.println("Summer");
                     }else {
                         System.out.println("-1");
                     }
@@ -91,9 +96,15 @@ public class Main {
                     System.out.println("-1");
                 }
             } else if (a<8&&a%2==0){
-                if (a>3){
+                if (a<5){
                     if (b<31){
                         System.out.println("Spring");
+                    }else {
+                        System.out.println("-1");
+                    }
+                }else {
+                    if (b<31){
+                        System.out.println("Summer");
                     }else {
                         System.out.println("-1");
                     }
