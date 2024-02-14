@@ -12,8 +12,8 @@ public class Main {
             int m1 = Integer.parseInt(st.nextToken());
             int n2 = Integer.parseInt(st.nextToken());
             int m2 = Integer.parseInt(st.nextToken());
-            for (int j=n1+1;j<n2;j++){
-                for (int k = m1+1;k<m2;k++){
+            for (int j=n1+1;j<=n2;j++){
+                for (int k = m1+1;k<=m2;k++){
                     if (arr[j][k]>=1){
                         t = true;
                     }
