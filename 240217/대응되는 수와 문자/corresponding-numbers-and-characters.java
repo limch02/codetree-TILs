@@ -1,38 +1,37 @@
-import java.util.*;
-import java.io.*;
+import java.util.Scanner;
+import java.util.HashMap;
 
 public class Main {
-    public static boolean isNumeric(String str) {
-        return str.matches("\\d+");
-    }
+    public static final int MAX_N = 100000;
+    
+    // 변수 선언
+    public static int n, m;
+    public static String[] words = new String[MAX_N + 1];
+    public static HashMap<String, Integer> StringToNum = new HashMap<>();
 
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        int a = Integer.parseInt(st.nextToken());
-        int b = Integer.parseInt(st.nextToken());
-
-        Map<String, Integer> map = new HashMap<>();
-        for (int i = 0; i < a; i++) {
-            StringTokenizer s = new StringTokenizer(br.readLine());
-            String k = s.nextToken();
-            map.put(k, i+1);
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // 입력:
+        n = sc.nextInt();
+        m = sc.nextInt();
+        
+        // 각 숫자의 대응되는 문자를 array에,
+        // 각 문자의 대응되는 숫자를 hashmap에 기록해줍니다.
+        for(int i = 1; i <= n; i++) {
+            words[i] = sc.next();
+            StringToNum.put(words[i], i);
         }
 
-        Set<String> keySet = map.keySet(); // 키셋을 한 번만 가져옴
-        for (int i = 0; i < b; i++) {
-            String t = br.readLine();
-            if (isNumeric(t)) {
-                int targetValue = Integer.parseInt(t);
-                for (String key : keySet) { // 키셋을 반복하여 해당 값 찾음
-                    if (map.get(key) == targetValue) {
-                        System.out.println(key);
-                        break; // 찾았으면 반복 종료
-                    }
-                }
-            } else {
-                System.out.println(map.get(t));
-            }
+        while(m-- > 0) {
+            String key = sc.next();
+
+            // 입력된 값이 숫자일 때에는 array에 저장한 문자를 출력합니다.
+            if('0' <= key.charAt(0) && key.charAt(0) <= '9')
+                System.out.println(words[Integer.parseInt(key)]);
+            
+            // 입력된 값이 문자일 때에는 hashmap에 기록된 대응되는 숫자를 출력합니다.
+            else
+                System.out.println(StringToNum.get(key));
         }
     }
 }
