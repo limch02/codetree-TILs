@@ -15,7 +15,7 @@ public class Main {
             }
         }
         for (String string:map.keySet()){
-            double d = (double)map.get(string)/5*100;
+            double d = (double)map.get(string)/a*100;
             String k = String.format("%.4f",d);
             System.out.println(string+" " +k);
         }
