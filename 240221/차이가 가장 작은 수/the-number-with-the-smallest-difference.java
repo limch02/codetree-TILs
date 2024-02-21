@@ -17,12 +17,12 @@ public class Main {
         }
         for (int i =0;i<a;i++){
             if (arr[i]<0){
-                int c = Math.abs(b + arr[i]-1);
+                int c = arr[i]+b;
                 if (set.ceiling(c) != null) {
                     ans.add(Math.abs(set.ceiling(c) - arr[i]));
                 }
             }else {
-                int c = Math.abs(b + arr[i]);
+                int c = b + arr[i];
                 if (set.ceiling(c) != null) {
                     ans.add(Math.abs(set.ceiling(c) - arr[i]));
                 }
