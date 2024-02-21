@@ -7,26 +7,20 @@ public class Main {
         StringTokenizer st = new StringTokenizer(br.readLine());
         int a = Integer.parseInt(st.nextToken());
         int b = Integer.parseInt(st.nextToken());
-        int[] arr = new int[a];
-        ArrayList<Integer> diffs = new ArrayList<>();
-        for (int i = 0; i < a; i++) {
-            arr[i] = Integer.parseInt(br.readLine());
+        TreeSet<Integer> set = new TreeSet<>();
+        TreeSet<Integer> ans = new TreeSet<>();
+        int [] arr = new int[a];
+        for (int i =0;i<a;i++){
+            int k = Integer.parseInt(br.readLine());
+            arr[i] = k;
+            set.add(k);
         }
-        Arrays.sort(arr);
-        for (int i = 0; i < a - 1; i++) {
-            for (int j =0;j<a;j++) {
-                int diff = Math.abs(arr[j] - arr[i]);
-                if (diff >= b) {
-                    diffs.add(diff);
-                }
+        for (int i =0;i<a;i++){
+            int c = Math.abs(b+arr[i]);
+            if (set.ceiling(c)!=null){
+                ans.add(Math.abs(set.ceiling(c)-arr[i]));
             }
         }
-        Collections.sort(diffs);
-
-        if (diffs.isEmpty()) {
-            System.out.println(-1);
-        } else {
-            System.out.println(diffs.get(0));
-        }
+        System.out.println(ans.first());
     }
 }
