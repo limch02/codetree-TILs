@@ -21,6 +21,10 @@ public class Main {
                 ans.add(Math.abs(set.ceiling(c)-arr[i]));
             }
         }
-        System.out.println(ans.first());
+        if (ans.isEmpty()){
+            System.out.println(-1);
+        }else {
+            System.out.println(ans.first());
+        }
     }
 }
