@@ -12,10 +12,9 @@ public class Main {
         for (int i =0;i<a;i++){
             arr[i] = Integer.parseInt(br.readLine());
         }
-        Arrays.sort(arr);
         for (int i =0;i<a;i++){
             for (int j =i+1;j<a;j++){
-                int k = arr[j]-arr[i];
+                int k = (int)Math.abs(arr[j]-arr[i]);
                 if (k>=b){
                     set.add(k);
                 }
