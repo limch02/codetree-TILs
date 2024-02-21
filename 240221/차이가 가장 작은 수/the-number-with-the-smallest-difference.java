@@ -14,9 +14,11 @@ public class Main {
         }
         Arrays.sort(arr);
         for (int i = 0; i < a - 1; i++) {
-            int diff = Math.abs(arr[i + 1] - arr[i]);
-            if (diff >= b) {
-                diffs.add(diff);
+            for (int j =0;j<a;j++) {
+                int diff = Math.abs(arr[j] - arr[i]);
+                if (diff >= b) {
+                    diffs.add(diff);
+                }
             }
         }
         Collections.sort(diffs);
