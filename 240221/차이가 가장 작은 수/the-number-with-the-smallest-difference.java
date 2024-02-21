@@ -1,0 +1,30 @@
+import java.util.*;
+import java.io.*;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int a = Integer.parseInt(st.nextToken());
+        int b= Integer.parseInt(st.nextToken());
+        int [] arr = new int[a];
+        TreeSet<Integer> set = new TreeSet<>();
+        for (int i =0;i<a;i++){
+            arr[i] = Integer.parseInt(br.readLine());
+        }
+        Arrays.sort(arr);
+        for (int i =0;i<a;i++){
+            for (int j =i+1;j<a;j++){
+                int k = arr[j]-arr[i];
+                if (k>=b){
+                    set.add(k);
+                }
+            }
+        }
+        if (set.ceiling(b)!=null){
+            System.out.println(set.ceiling(b));
+        }else {
+            System.out.println(-1);
+        }
+    }
+}
