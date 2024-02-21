@@ -16,9 +16,16 @@ public class Main {
             set.add(k);
         }
         for (int i =0;i<a;i++){
-            int c = Math.abs(b+arr[i]);
-            if (set.ceiling(c)!=null){
-                ans.add(Math.abs(set.ceiling(c)-arr[i]));
+            if (arr[i]<0){
+                int c = Math.abs(b + arr[i]-1);
+                if (set.ceiling(c) != null) {
+                    ans.add(Math.abs(set.ceiling(c) - arr[i]));
+                }
+            }else {
+                int c = Math.abs(b + arr[i]);
+                if (set.ceiling(c) != null) {
+                    ans.add(Math.abs(set.ceiling(c) - arr[i]));
+                }
             }
         }
         if (ans.isEmpty()){
