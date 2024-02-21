@@ -21,10 +21,10 @@ public class Main {
                 }
             }
         }
-        if (set.ceiling(b)!=null){
-            System.out.println(set.ceiling(b));
-        }else {
+        if (set.isEmpty()){
             System.out.println(-1);
+        }else {
+            System.out.println(set.first());
         }
     }
 }
