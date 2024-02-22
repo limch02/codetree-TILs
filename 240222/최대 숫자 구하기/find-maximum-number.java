@@ -7,20 +7,18 @@ public class Main {
         StringTokenizer st = new StringTokenizer(br.readLine());
         int a = Integer.parseInt(st.nextToken());
         int b = Integer.parseInt(st.nextToken());
-        ArrayList<Integer> arr =new ArrayList<>();
+        int[] arr = new int[a];
+        TreeSet<Integer> set = new TreeSet<>();
         StringTokenizer s = new StringTokenizer(br.readLine());
         for (int i=1;i<=b;i++){
-            arr.add(i);
+            set.add(i);
+        }
+        for (int i =0;i<a;i++){
+            arr[i] = Integer.parseInt(s.nextToken());
         }
         for (int i = 0;i<a;i++){
-            int c = Integer.parseInt(s.nextToken());
-            if (c>=arr.size()){
-                arr.remove(arr.size()-1);
-            }else {
-                arr.remove(c-1);
-            }
-            Collections.sort(arr);
-            System.out.println(arr.get(arr.size()-1));
+            set.remove(arr[i]);
+            System.out.println(set.last());
         }
     }
 }
