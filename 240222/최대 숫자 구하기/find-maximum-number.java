@@ -14,7 +14,7 @@ public class Main {
         }
         for (int i = 0;i<a;i++){
             int c = Integer.parseInt(s.nextToken());
-            if (c>arr.size()){
+            if (c>=arr.size()){
                 arr.remove(arr.size()-1);
             }else {
                 arr.remove(c-1);
