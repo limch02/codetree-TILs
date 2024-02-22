@@ -15,8 +15,8 @@ public class Main {
                 if (s.equals("I")) {
                     arr.add(c);
                 }else {
-                    Collections.sort(arr);
                     if (!arr.isEmpty()) {
+                        Collections.sort(arr);
                         if (c == 1) {
                             arr.remove(arr.size() - 1);
                         } else {
