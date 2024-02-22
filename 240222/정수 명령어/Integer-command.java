@@ -25,6 +25,7 @@ public class Main {
                     }
                 }
             }
+            Collections.sort(arr);
             if (arr.isEmpty()){
                 System.out.println("EMPTY");
             }else{
