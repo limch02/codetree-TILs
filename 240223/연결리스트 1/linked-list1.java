@@ -20,13 +20,13 @@ class DoublyLinkedList {
         if (temp.prev!=null){
             System.out.print(temp.prev.value+" ");
         }else {
-            System.out.print("null ");
+            System.out.print("(Null) ");
         }
         System.out.print(temp.value+" ");
         if (temp.next!=null){
             System.out.print(temp.next.value+" ");
         }else {
-            System.out.print("null ");
+            System.out.print("(Null) ");
         }
         System.out.println(); // 줄 바꿈
     }
