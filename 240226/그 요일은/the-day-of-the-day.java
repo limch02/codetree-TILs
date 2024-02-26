@@ -34,7 +34,7 @@ public class Main {
 
         int cnt =0;
         if (s.equals("Mon")){
-            System.out.println(diff/7);
+            System.out.println(diff/7+1);
         } else if (s.equals("Tue")) {
             System.out.println((diff+6)/7);
         }else if (s.equals("Wed")) {
