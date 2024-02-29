@@ -27,8 +27,8 @@ public class Main {
                     }
                 }
             }else {
-                for (int j = x1; j < x2; j++) {
-                    for (int k = y1; k < y2; k++) {
+                for (int j = x1+1; j < x2; j++) {
+                    for (int k = y1+1; k < y2; k++) {
                         if (arr[j][k] == 1) {
                             arr[j][k] = 0;
                             s2++;
