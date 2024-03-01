@@ -16,10 +16,11 @@ public class Main {
                 if (cnt > max){
                     max = cnt;
                 }
+                cnt =1;
             }else {
                 cnt++;
             }
         }
-        System.out.println(cnt);
+        System.out.println(max);
     }
 }
