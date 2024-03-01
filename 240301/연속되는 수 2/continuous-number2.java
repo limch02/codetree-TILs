@@ -21,6 +21,9 @@ public class Main {
                 cnt++;
             }
         }
+        if (cnt>max){
+            max = cnt;
+        }
         System.out.println(max);
     }
 }
