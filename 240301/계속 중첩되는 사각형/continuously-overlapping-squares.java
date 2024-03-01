@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int a =Integer.parseInt(br.readLine());
-        int [][] arr = new int[200][200];
+        int [][] arr = new int[201][201];
         int sum =0;
         for (int i =0;i<a;i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
