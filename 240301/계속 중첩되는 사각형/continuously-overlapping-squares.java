@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int a =Integer.parseInt(br.readLine());
-        int [][] arr = new int[201][201];
+        int [][] arr = new int[200][200];
         int sum =0;
         for (int i =0;i<a;i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
@@ -17,9 +17,6 @@ public class Main {
             if (i%2==0){
                 for (int j =x1;j<x2;j++){
                     for (int k=y1;k<y2;k++){
-                        if (arr[j][k]==2){
-                            sum--;
-                        }
                         arr[j][k] = 1;
                     }
                 }
@@ -27,8 +24,14 @@ public class Main {
                 for (int j =x1;j<x2;j++){
                     for (int k=y1;k<y2;k++){
                         arr[j][k] =2;
-                        sum ++;
                     }
+                }
+            }
+        }
+        for (int j =0;j<200;j++){
+            for (int k=0;k<200;k++){
+                if (arr[j][k]==2){
+                    sum++;
                 }
             }
         }
