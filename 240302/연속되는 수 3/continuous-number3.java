@@ -32,7 +32,7 @@ public class Main {
                     if (cnt > max) {
                         max = cnt;
                     }
-                    cnt = 0;
+                    cnt = 1;
                 }
             }
             if (cnt>max){
