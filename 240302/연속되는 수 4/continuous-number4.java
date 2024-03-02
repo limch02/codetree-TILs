@@ -23,7 +23,7 @@ public class Main {
                         max = cnt;
                     }
                     bigger =0;
-                    cnt =1;
+                    cnt =0;
                 }
             }
             if (cnt>max){
