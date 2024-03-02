@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int a =Integer.parseInt(br.readLine());
-        int cnt = 0;
+        int cnt = 1;
         int max = 0;
         int bigger =0;
         if (a ==1 ){
@@ -23,7 +23,7 @@ public class Main {
                         max = cnt;
                     }
                     bigger =0;
-                    cnt =0;
+                    cnt =1;
                 }
             }
             if (cnt>max){
