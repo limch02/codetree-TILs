@@ -23,6 +23,7 @@ public class Main {
             if (map.get(i)==c){
                 t = true;
                 f =i;
+                break;
             }
         }
         if (t){
