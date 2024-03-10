@@ -4,25 +4,29 @@ import java.io.*;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int a = Integer.parseInt(br.readLine());
-        int [][] arr = new int[a][a];
-        for (int i =0;i<a;i++){
+        int n = Integer.parseInt(br.readLine());
+        int [][] arr = new int[n][n];
+        for (int i =0;i<n;i++){
             StringTokenizer st = new StringTokenizer(br.readLine());
-            for (int j=0;j<a;j++){
+            for (int j=0;j<n;j++){
                 arr[i][j] = Integer.parseInt(st.nextToken());
             }
         }
-        int sum =0;
-        int max = 0;
-        ArrayList<Integer> s = new ArrayList<>();
-        for (int i =0;i<a;i++){
-            for (int j =0;j<a-2;j++){
-                sum += arr[i][j]+arr[i][j+1]+arr[i][j+2];
-                s.add(sum);
-                sum =0;
+        int max_cnt = 0;
+        for(int i = 0; i < n; i++) {
+            for (int j = 0; j < n - 2; j++) {
+                for (int k = 0; k < n; k++) {
+                    for (int l = 0; l < n - 2; l++) {
+                        if (i == k && Math.abs(j - l) <= 2)//
+                            continue;
+
+                        int cnt1 = arr[i][j] + arr[i][j + 1] + arr[i][j + 2];
+                        int cnt2 = arr[k][l] + arr[k][l + 1] + arr[k][l + 2];
+                        max_cnt = Math.max(max_cnt, cnt1 + cnt2);
+                    }
+                }
             }
         }
-        Collections.sort(s);
-        System.out.println(s.get(s.size()-1)+s.get(s.size()-2));
+        System.out.println(max_cnt);
     }
 }
