@@ -18,13 +18,13 @@ public class Main {
             sum += c;
         }
         if (sum<=b){
-            int min = Integer.MIN_VALUE;
+            int min = Integer.MAX_VALUE;
             for (int i = 0; i < a; i++) {
                 for (int j = i + 1; j < a; j++) {
                     int sum1 = sum;
                     sum1 -= arr[i];
                     sum1 -= arr[j];
-                    min = Math.max(Math.abs(sum1 - b), min);
+                    min = Math.min(b-sum1, min);
                 }
             }
             System.out.println(min);
