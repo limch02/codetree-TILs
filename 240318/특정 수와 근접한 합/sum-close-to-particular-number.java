@@ -1,31 +1,29 @@
 import java.io.*;
 import java.util.*;
-
 public class Main {
-
+    static StringTokenizer st ;
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        int a = Integer.parseInt(st.nextToken());
-        int b = Integer.parseInt(st.nextToken());
-        int [] arr =new int[a];
-        int min = Integer.MAX_VALUE;
-        int sum =0;
-        StringTokenizer num = new StringTokenizer(br.readLine());
-        for (int i =0;i<a;i++){
-            int c = Integer.parseInt(num.nextToken());
-            arr[i] = c;
-            sum += c;
-        }
+        st = new StringTokenizer(br.readLine());
+        int n = Integer.parseInt(st.nextToken());
+        int s = Integer.parseInt(st.nextToken());
+        int [] arr = new int [n];
+        st = new StringTokenizer(br.readLine());
+        for(int i =0; i<n; i++){
+            arr[i] = Integer.parseInt(st.nextToken());
 
-        for (int i =0;i<a;i++){
-            for (int j=i+1;j<a;j++){
-                int sum1 = sum;
-                sum1 -= arr[i];
-                sum1 -= arr[j];
-                min = Math.min(sum1-b,min);
-            }
         }
-        System.out.println(min);
+        int sum =0;
+        int abjMin = Integer.MAX_VALUE;
+        for(int i=0; i<n; i++){
+            for(int j=i+1; j<n; j++){
+                if(i!=j&&j!=i+1){
+                    sum+=arr[j];
+                }
+            }
+            abjMin = Math.min(abjMin, Math.abs(s-sum));
+            sum=0;
+        }
+        System.out.print(abjMin);
     }
 }
